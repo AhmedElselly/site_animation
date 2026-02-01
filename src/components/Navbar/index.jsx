@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import styles from "../../styles/Navbar.module.css";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) {
@@ -20,7 +23,7 @@ export default function Navbar() {
         Motion Lab
       </div>
 
-      <div className={styles.links}>
+      <div className={`${styles.links} ${isOpen ? styles.open : ""}`}>
         <button onClick={() => scrollTo("hero")}>Home</button>
         <button onClick={() => scrollTo("about")}>About</button>
         <button onClick={() => scrollTo("features")}>Features</button>
@@ -28,6 +31,17 @@ export default function Navbar() {
         <button onClick={() => scrollTo("showcase")}>Showcase</button>
         <button onClick={() => scrollTo("contact")}>Contact</button>
       </div>
+
+      {/* Hamburger */}
+      <button
+        className={styles.hamburger}
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-label="Toggle navigation"
+      >
+        <span />
+        <span />
+        <span />
+      </button>
     </motion.nav>
   );
 }
