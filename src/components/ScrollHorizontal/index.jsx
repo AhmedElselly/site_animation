@@ -65,8 +65,8 @@ export default function ScrollHorizontal() {
 
   const textOpacity = useTransform(
     scrollYProgress,
-    [0, 0.2, 0.8, 1],
-    [0, 0.1, 0.1, 0.2],
+    [0.1, 0.2, 0.8, 1],
+    [0.1, 0.1, 0.1, 0.2],
   );
 
   const x = useTransform(
@@ -80,7 +80,7 @@ export default function ScrollHorizontal() {
   return (
     <div id="scroll-motion">
       <section className="intro-section">
-        <h1 className="impact">Tokyo Nights</h1>
+        <h1 className="impact">Cairo Nights</h1>
       </section>
 
       <div ref={containerRef} className="scroll-container">
