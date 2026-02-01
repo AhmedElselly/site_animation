@@ -73,6 +73,7 @@
 
   .hamburger {
     display: block;
+    margin-inline-end: 40px;
   }
 
   .links {
