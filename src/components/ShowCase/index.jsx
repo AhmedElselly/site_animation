@@ -15,7 +15,7 @@ export default function Showcase() {
   const foregroundY = useTransform(scrollYProgress, [0, 1], ["15%", "-15%"]);
 
   return (
-    <section ref={sectionRef} className={styles.showcase}>
+    <section id="showcase" ref={sectionRef} className={styles.showcase}>
       {/* Background layer */}
       <motion.div
         className={styles.showcase_background}

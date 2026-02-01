@@ -2,21 +2,21 @@ import { motion } from "framer-motion";
 import styles from "../../styles/About.module.css";
 
 export default function About() {
-  const container = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 1.2,
-      },
-    },
-  };
+  // const container = {
+  //   hidden: {},
+  //   show: {
+  //     transition: {
+  //       // staggerChildren: 0.2,
+  //     },
+  //   },
+  // };
 
   const textItem = {
     hidden: { opacity: 0, x: -60 },
     show: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 1.8, ease: "easeOut" },
     },
   };
 
@@ -25,15 +25,15 @@ export default function About() {
     show: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.9, ease: "easeOut" },
+      transition: { duration: 1.8, ease: "easeOut" },
     },
   };
 
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <motion.div
         className={styles.about_inner}
-        variants={container}
+        // variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}

@@ -3,7 +3,7 @@ import styles from "../../styles/CTA.module.css";
 
 export default function CTA() {
   return (
-    <section className={styles.cta}>
+    <section id="contact" className={styles.cta}>
       <motion.div
         className={styles.cta_inner}
         initial={{ opacity: 0, y: 60 }}
