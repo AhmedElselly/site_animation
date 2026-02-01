@@ -52,6 +52,8 @@ export default function ScrollHorizontal() {
     offset: ["start start", "end end"],
   });
 
+  console.log({ scrollYProgress });
+
   // Move from first item centered to last item centered
   const totalDistance = (items.length - 1) * (ITEM_WIDTH + GAP);
 
@@ -59,6 +61,12 @@ export default function ScrollHorizontal() {
     scrollYProgress,
     [0, 1],
     [0, -totalDistance * 0.4], // slower than images
+  );
+
+  const textOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.8, 1],
+    [0, 0.1, 0.1, 0.2],
   );
 
   const x = useTransform(
@@ -80,7 +88,7 @@ export default function ScrollHorizontal() {
           {/* text movement in the background */}
           <motion.div
             className="scroll-text"
-            style={isMobile ? undefined : { x: textX }}
+            style={isMobile ? undefined : { x: textX, opacity: textOpacity }}
           >
             <span>Tokyo</span>
             <span>Nights</span>
@@ -108,7 +116,7 @@ export default function ScrollHorizontal() {
 
           <motion.div
             className="scroll-text-bottom"
-            style={isMobile ? undefined : { x: textX }}
+            style={isMobile ? undefined : { x: textX, opacity: textOpacity }}
           >
             <span>Cairo</span>
             <span>Life</span>
