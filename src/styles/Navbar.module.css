@@ -1,0 +1,38 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.2rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
+
+.navbar_logo {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.navbar_links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.navbar_links li {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.navbar_links li:hover {
+  opacity: 1;
+}
