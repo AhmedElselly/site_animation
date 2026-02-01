@@ -24,11 +24,11 @@ export default function Navbar() {
       </div>
 
       <div className={`${styles.links} ${isOpen ? styles.open : ""}`}>
-        <button onClick={() => scrollTo("hero")}>Home</button>
+        <button onClick={() => scrollTo("showcase")}>Home</button>
         <button onClick={() => scrollTo("about")}>About</button>
         <button onClick={() => scrollTo("features")}>Features</button>
         <button onClick={() => scrollTo("scroll-motion")}>Work</button>
-        <button onClick={() => scrollTo("showcase")}>Showcase</button>
+        {/* <button onClick={() => scrollTo("showcase")}>Showcase</button> */}
         <button onClick={() => scrollTo("contact")}>Contact</button>
       </div>
 
