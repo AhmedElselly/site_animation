@@ -13,11 +13,12 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
+      <Showcase />
       <About />
       <Features />
       <ScrollHorizontal />
-      <Showcase />
+      {/* <Showcase /> */}
       <CTA />
     </div>
   );
