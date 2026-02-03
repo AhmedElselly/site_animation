@@ -47,6 +47,7 @@ const GAP = isMobile ? 15 : 30;
 
 export default function ScrollHorizontal() {
   const containerRef = useRef(null);
+  // scroll progress inside one section not the whole page
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],

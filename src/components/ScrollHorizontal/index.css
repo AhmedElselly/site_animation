@@ -142,6 +142,16 @@ body {
   } */
 }
 
+@media (pointer: coarse) {
+  .sticky-wrapper {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow-x: auto;
+    padding: 40px 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .gallery {
     transform: none !important;
